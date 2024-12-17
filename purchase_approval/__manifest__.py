@@ -8,8 +8,9 @@
     ],
     "data":[
        'security/ir.model.access.csv',
-       "views/email_template.xml",
-       "views/purchase_order_views.xml"
+       'security/groups.xml',
+       "data/email_template.xml",
+       "views/purchase_order_views.xml",
 
     ],
     

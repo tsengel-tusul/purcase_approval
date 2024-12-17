@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<odoo>
+    <record id="email_template_approved" model="mail.template">
+        <field name="name">Approval Email</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="subject">Purchase Order Approved</field>
+        <field name="email_from">${object.user_id.email|safe}</field>
+        <field name="email_to">${object.partner_id.email|safe}</field>
+        <field name="body_html"><![CDATA[
+            <p>Dear ${object.partner_id.name},</p>
+            <p>Your purchase order ${object.name} has been approved.</p>
+        ]]></field>
+    </record>
+
+    <record id="email_template_reviewed" model="mail.template">
+        <field name="name">Review Email</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="subject">Purchase Order Reviewed</field>
+        <field name="email_from">${object.user_id.email|safe}</field>
+        <field name="email_to">${object.partner_id.email|safe}</field>
+        <field name="body_html"><![CDATA[
+            <p>Dear ${object.partner_id.name},</p>
+            <p>Your purchase order ${object.name} has been reviewed.</p>
+        ]]></field>
+    </record>
+
+    <record id="email_template_purchased" model="mail.template">
+        <field name="name">Purchased Email</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="subject">Purchase Order Completed</field>
+        <field name="email_from">${object.user_id.email|safe}</field>
+        <field name="email_to">${object.partner_id.email|safe}</field>
+        <field name="body_html"><![CDATA[
+            <p>Dear ${object.partner_id.name},</p>
+            <p>Your purchase order ${object.name} has been successfully completed.</p>
+        ]]></field>
+    </record>
+</odoo>-->
+<odoo>
+    <!-- Email Template: Approval -->
+    <record id="email_template_approved" model="mail.template">
+        <field name="name">Approval Email</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="subject">Purchase Order Approved</field>
+        <field name="email_from">{{(object.user_id.email)}}</field>
+        <field name="email_to">{{'jargaltsengel41@gmail.com'}}</field>
+        <field name="body_html"><![CDATA[
+            <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
+                <p>Dear {{ 'Valued Customer'}},</p>
+                <p>Your purchase order  has been approved.</p>
+                <p>Thank you for your continued trust in our services.</p>
+                <br/>
+                <p>Best regards,</p>
+            </div>
+        ]]></field>
+    </record>
+
+    <!-- Email Template: Reviewed -->
+    <record id="email_template_reviewed" model="mail.template">
+        <field name="name">Review Email</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="subject">Purchase Order Reviewed</field>
+        <field name="email_from">{{(object.user_id.email)}}</field>
+        <field name="email_to">{{'jargaltsengel41@gmail.com'}}</field>
+        <field name="body_html"><![CDATA[
+            <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
+                <p>Dear {{ 'Valued Customer'}},</p>
+                <p>Your purchase order has been reviewed.</p>
+                <p>Our team will ensure timely processing of your order.</p>
+                <br/>
+                <p>Best regards,</p>
+            </div>
+        ]]></field>
+    </record>
+
+    <!-- Email Template: Purchased -->
+    <record id="email_template_purchased" model="mail.template">
+        <field name="name">Purchased Email</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="subject">Purchase Order Completed</field>
+        <field name="email_from">{{(object.user_id.email)}}</field>
+        <field name="email_to">{{'jargaltsengel41@gmail.com'}}</field>
+        <field name="body_html"><![CDATA[
+            <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6;">
+                <p>Dear {{ 'Valued Customer'}},</p>
+                <p>Your purchase order  has been successfully completed.</p>
+                <p>We appreciate your business and look forward to serving you again.</p>
+                <br/>
+                <p>Best regards,</p>
+            </div>
+        ]]></field>
+    </record>
+</odoo>
+
+
+

@@ -1,0 +1,21 @@
+<odoo>
+    <record id="module_category_approval" model="ir.module.category">
+        <field name="name">Purchase Approval</field>
+        <field name="description">Category for purchase </field>
+    </record>
+   
+    <record id="group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_category_approval"/>
+    </record>
+   
+    <record id="group_controller" model="res.groups">
+        <field name="name">Controller</field>
+        <field name="category_id" ref="module_category_approval"/>
+    </record>
+   
+    <record id="group_admin" model="res.groups">
+        <field name="name">Admin</field>
+        <field name="category_id" ref="module_category_approval"/>
+    </record>
+</odoo>
